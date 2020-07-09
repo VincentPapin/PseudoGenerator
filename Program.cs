@@ -41,10 +41,11 @@ namespace TestCSharp
                     }
                 }
             }
-
+            
+           //On boucle sur de 0 au nombre de caractère choisi par l'utilisateur
             for (int i = 0; i < nbreCarac; i++)
             {
-                //Si i est paire alors c'est voyelle
+                //Si i est paire alors on va chercher dans las liste des voyelles
                 if (i%2 == 0)
                 {
                     indiceRand = rand.Next(0, listeVoyelle.Count);
@@ -58,55 +59,9 @@ namespace TestCSharp
 
             pseudo = Char.ToUpper(pseudo[0])+pseudo.Substring(1);
 
-             Console.WriteLine($"Ton pseudo : {pseudo}");
+            Console.WriteLine($"Ton pseudo : {pseudo}");
 
             
-            // List<Test> listeTest = new List<Test>();
-            // Random rand = new Random();
-            // int nbreRand = rand.Next(1,100);
-            // bool trouve = false;
-            // int nbreSaisie;
-            // string sNbreSaisie;
-            // int nbreEssai = 0;
-
-            // while (!trouve)
-            // {
-            //     nbreEssai++;
-            //     Console.WriteLine("Veuillez saisir un nombre entre 1 et 100");
-            //     sNbreSaisie = Console.ReadLine();
-            //     if (!int.TryParse(sNbreSaisie, out nbreSaisie))
-            //     {
-            //         Console.WriteLine("Mauvaise saisie");
-            //     }else
-            //     {
-            //         if (nbreSaisie == nbreRand)
-            //         {
-            //             trouve = true;
-            //         }else if (nbreSaisie < nbreRand)
-            //         {
-            //             Console.WriteLine("C'est plus");
-            //         }else
-            //         {
-            //             Console.WriteLine("C'est moins");
-            //         }
-            //     }
-
-            // }
-
-            // Console.WriteLine($"GG tu as trouvé le nombre mystère en {nbreEssai} essais");
-
-
-            // for (int i = 0; i < 10; i++)
-            // {
-            //     listeTest.Add(new Test(){nom = "Toto "+i, age = i});
-            // }
-
-            
-            // foreach (var item in listeTest)
-            // {
-            //     Console.WriteLine($"Nom : {item.nom} Age : {item.age}"); 
-            // }
-
         } 
       
     }
